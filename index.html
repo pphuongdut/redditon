@@ -10,14 +10,8 @@
     />
     <link rel="stylesheet" href="./assets/css/tailwind.output.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico" />
 
-    <script
-      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
-      defer
-    ></script>
-    <script src="./assets/js/init-alpine.js"></script>
-    <!-- You need focus-trap.js to make the modal accessible -->
-    <script src="./assets/js/focus-trap.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,7 +21,9 @@
     />
   </head>
   <body>
-    <div class="main-container min-h-screen w-screen relative">
+    <div
+      class="main-container min-h-screen w-screen relative overflow-x-hidden"
+    >
       <div
         class="h-32 w-full bg-blue flex items-center justify-center gap-4 text-white"
       >
@@ -50,28 +46,33 @@
       </div>
 
       <!-- main content -->
-      <div class="p-4 md:p-10">
-        <form class="w-full flex flex-col gap-4">
+      <div class="p-4 md:p-10 w-full mb-32">
+        <form id="itemForm" class="w-full flex flex-col gap-4">
           <input
             class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
             id="inline-full-name"
             type="text"
+            required
             placeholder="Enter your username"
             value=""
           />
           <input
             class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
             id="inline-password"
+            required
             placeholder="What's on your mind?"
           />
 
           <button
             class="shadow bg-blue hover:bg-blue-600 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
             type="button"
+            id="postButton"
           >
             Post
           </button>
         </form>
+
+        <ul id="itemList" class="mt-4"></ul>
       </div>
       <div
         class="h-24 w-full flex items-center justify-center text-white bg-blue text-2xl font-bold absolute bottom-0 left-0"
@@ -80,4 +81,6 @@
       </div>
     </div>
   </body>
+
+  <script src="./assets/js/script.js"></script>
 </html>
