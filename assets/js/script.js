@@ -56,7 +56,6 @@ document.getElementById("postButton").addEventListener("click", function () {
     items.unshift(newItem); // Add new item to the beginning of the list
     saveItemsToLocalStorage(items); // Save updated list to local storage
     renderList(items); // Re-render the list
-    document.getElementById("inline-full-name").value = ""; // Clear the username input field
     document.getElementById("inline-password").value = ""; // Clear the content input field
   } else {
     alert(
