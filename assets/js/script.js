@@ -18,7 +18,6 @@ function getItemsFromLocalStorage() {
       username: "reddit_lover123",
       content: "YOOO I heard green candles r the new thing",
     },
-    { username: "stonedMonkeyJeet", content: "solana is dope man" },
   ];
 }
 
